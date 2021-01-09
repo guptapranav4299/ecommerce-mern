@@ -1,10 +1,11 @@
 # ProShop MERN E-Commerce Website
 
+## Installation guide
  ---
 
-git clone
-npm install
-cd frontend
-npm install
-
+- git clone "project-url"
+- npm install
+- cd frontend
+- npm install
+- Create a .env file
  ---
