@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "MERN Shopping Cart",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guptapranav4299/ecommerce-mern.git"
+  },
+  "author": "Pranav Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guptapranav4299/ecommerce-mern/issues"
+  },
+  "homepage": "https://github.com/guptapranav4299/ecommerce-mern#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
