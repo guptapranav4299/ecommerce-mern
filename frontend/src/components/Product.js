@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Card} from 'react-bootstrap'
-import products from '../products'
 import  Rating from '../components/Rating'
 
 const Product = ({ product }) => {
