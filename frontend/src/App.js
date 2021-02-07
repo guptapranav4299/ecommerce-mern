@@ -8,6 +8,8 @@ import cartScreen from './screens/CartScreen'
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import ProfileScreen from './screens/ProfileScreen'
+import ShippingScreen from './screens/ShippingScreen'
+import PaymentScreen from './screens/PaymentScreen'
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 const App= () =>{
   return (
@@ -15,6 +17,8 @@ const App= () =>{
     <Header />
     <main className='py-3'>
       <Container>
+      <Route path='/shipping' component={ShippingScreen} exact></Route>
+      <Route path='/payment' component={PaymentScreen} exact></Route>
       <Route path='/login' component={LoginScreen} exact></Route>
       <Route path='/register' component={RegisterScreen} exact></Route>
       <Route path='/profile' component={ProfileScreen} exact></Route>
