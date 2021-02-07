@@ -9,18 +9,18 @@ import {savePaymentMethod} from '../actions/cartActions'
     const cart= useSelector(state => state.cart)
     const {shippingAddress} = cart
 
-    if(!shippingAddress){
+    if(!shippingAddress.address){
         history.push('/shipping')
     }
     const [paymentMethod, setPaymentMethod] = useState('PayPal')
 
     const dispatch=useDispatch()
 
-    const submitHandler = (e) =>{
+    const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(savePaymentMethod({paymentMethod}))
+        dispatch(savePaymentMethod(paymentMethod))
         history.push('/placeorder')
-    }
+      }
     return (
         <FormContainer>
                 <CheckoutSteps step1 step2 step3></CheckoutSteps>
