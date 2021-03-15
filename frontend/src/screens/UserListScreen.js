@@ -6,7 +6,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import {listUsers, deleteUser} from '../actions/userActions'
 
-const UserListScreen = ({history}) => {
+const UserListScreen = ({ history }) => {
     
     const dispatch = useDispatch()
 
