@@ -17,15 +17,18 @@ import {
 const OrderScreen = ({ match }) => {
     const orderId = match.params.id
 
+
     const [sdkReady, setSdkReady] = useState(false)
   
     const dispatch = useDispatch()
-  
+
+
+    
     const orderDetails = useSelector((state) => state.orderDetails)
-    const { order, loading, error } = orderDetails
-  
+    const { order, loading , error } = orderDetails
+    
     const orderPay = useSelector((state) => state.orderPay)
-    const { loading: loadingPay, success: successPay } = orderPay
+    const { loading:loadingPay, success:successPay } = orderPay
 
     if (!loading) {
         //   Calculate prices
@@ -34,7 +37,7 @@ const OrderScreen = ({ match }) => {
         }
     
         order.itemsPrice = addDecimals(
-          order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
+        order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
         )
       }
 
@@ -64,7 +67,7 @@ const OrderScreen = ({ match }) => {
         },[dispatch, orderId, successPay, order])
 
 
-         const successPaymentHandler = (paymentResult) => {
+    const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult)
     dispatch(payOrder(orderId, paymentResult))
   }
@@ -158,25 +161,25 @@ const OrderScreen = ({ match }) => {
               <ListGroup.Item>
                 <Row>
                   <Col>Items</Col>
-                  <Col> INR-{order.itemsPrice}</Col>
+                  <Col> INR {order.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Shipping</Col>
-                  <Col> INR-{order.shippingPrice}</Col>
+                  <Col> INR {order.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Tax</Col>
-                  <Col> INR-{order.taxPrice}</Col>
+                  <Col> INR {order.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Total</Col>
-                  <Col>INR-{order.totalPrice}</Col>
+                  <Col>INR {order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
               {!order.isPaid && (
