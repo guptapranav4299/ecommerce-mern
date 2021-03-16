@@ -32,6 +32,7 @@ const App= () =>{
       <Route path='/register' component={RegisterScreen}></Route>
       <Route path='/profile' component={ProfileScreen}></Route>
         <Route path='/' component={HomeScreen} exact></Route>
+        <Route path='/search/:keyword' component={HomeScreen}></Route>
         <Route path='/product/:id' component={ProductScreen}></Route>
         <Route path='/admin/userlist' component={UserListScreen}></Route>
         <Route path='/admin/orderlist' component={OrderListScreen}></Route>
