@@ -4,7 +4,7 @@
 
 
 ## ScreenShots
-![Screenshot](\uploads\2021-03-16.png)
+![Screenshot](https://github.com/guptapranav4299/ecommerce-mern/blob/master/uploads/2021-03-16.png)
 
 ## Deplyed Project
 
