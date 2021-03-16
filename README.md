@@ -3,6 +3,12 @@
 > eCommerce platform built with the MERN stack & Redux.
 
 
+## ScreenShots
+![Screenshot](\uploads\2021-03-16.png)
+
+## Deplyed Project
+
+[Deplyed Link](https://mern-proshop-webapp.herokuapp.com/)
 
 ## Features
 
